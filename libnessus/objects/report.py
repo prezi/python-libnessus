@@ -147,7 +147,7 @@ class NessusReport(object):
                 host.started, '%a %b %d %H:%M:%S %Y')
             list_date.append(date_object)
         list_date.sort()
-        return list_date[0]
+        return list_date[0] if list_date else 'n/a'
 
     @property
     def endtime(self):
